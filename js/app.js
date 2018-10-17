@@ -72,6 +72,7 @@ class Enemy extends Character{ //O inimigo é um personagem, então ele contém 
     collision() {
         return ((this.x + positionX(1) - 50 > player.x && this.x + positionX(1) - 50 < player.x + positionX(1) || this.x >= player.x && this.x < player.x + positionX(1) - 50)) && this.y === player.y;
     }
+    //Referência de colisão vindo do https://github.com/mrmauricio/javascript_frogger/blob/master/js/app.js
 
     reset() {
         this.x = positionX(0);
