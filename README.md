@@ -8,8 +8,11 @@ Setas (Cima, Baixo, Esquerda, Direita);
 
 # Acesso ao jogo
 1 - Faça download pelo <https://github.com/ngemir/fliperama-clem/archive/master.zip>.
+
 2 - Extraia em lugar de preferência.
+
 3 - Abra o arquivo index.html
+
 4 - Bom jogo!
 
 ou 
