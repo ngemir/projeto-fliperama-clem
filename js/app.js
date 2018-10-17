@@ -93,9 +93,32 @@ class Player extends Character { /* Contém característica de personagem*/
     }
 
     /*Verifica cada movimento do jogador - comentado para seguir a sugestão do revisor*/
-//     update() {
-        
-//     }
+    update() {
+            switch (this.move) {
+                case 'up': /* Se apertar pra cima, verifica se não vai pra fora do mapa*/
+                    if(this.y - this.moveY <= positionY(-1))
+                        return;
+                    this.y -= this.moveY; /* Se estiver tudo certo, irá se mover, diminuindo a posição Y para subir */
+                    break;
+                case 'down': /* Se apertar pra baixo, verifica se não vai pra fora do mapa*/
+                    if(this.y + this.moveY > positionY(5))
+                        return;
+                    this.y += this.moveY;/* Se estiver tudo certo, irá se mover, aumentando a posição Y para descer */
+                    break;
+                case 'right':/* Se apertar pra direita, verifica se não vai pra fora do mapa*/
+                    if(this.x + this.moveX > positionX(4))
+                        return;
+                    this.x += this.moveX;/* Se estiver tudo certo, irá se mover, aumentando a posição X para ir para direita */
+                    break;
+                case 'left':
+                    if(this.x - this.moveX < positionX(0)) /* Se apertar pra esquerda, verifica se não vai pra fora do mapa*/
+                        return;
+                    this.x -= this.moveX;/* Se estiver tudo certo, irá se mover, diminuindo a posição X para ir para esquerda */
+                    break;
+                default: /* Prevenção de outros comandos, para fazer nada*/
+                    break;
+            }
+    }
 
     
     reset() {
@@ -105,30 +128,6 @@ class Player extends Character { /* Contém característica de personagem*/
 
     handleInput(mov) {
         this.move = mov;
-        switch (this.move) {
-            case 'up': /* Se apertar pra cima, verifica se não vai pra fora do mapa*/
-                if(this.y - this.moveY <= positionY(-1))
-                    return;
-                this.y -= this.moveY; /* Se estiver tudo certo, irá se mover, diminuindo a posição Y para subir */
-                break;
-            case 'down': /* Se apertar pra baixo, verifica se não vai pra fora do mapa*/
-                if(this.y + this.moveY > positionY(5))
-                    return;
-                this.y += this.moveY;/* Se estiver tudo certo, irá se mover, aumentando a posição Y para descer */
-                break;
-            case 'right':/* Se apertar pra direita, verifica se não vai pra fora do mapa*/
-                if(this.x + this.moveX > positionX(4))
-                    return;
-                this.x += this.moveX;/* Se estiver tudo certo, irá se mover, aumentando a posição X para ir para direita */
-                break;
-            case 'left':
-                if(this.x - this.moveX < positionX(0)) /* Se apertar pra esquerda, verifica se não vai pra fora do mapa*/
-                    return;
-                this.x -= this.moveX;/* Se estiver tudo certo, irá se mover, diminuindo a posição X para ir para esquerda */
-                break;
-            default: /* Prevenção de outros comandos, para fazer nada*/
-                break;
-        }
     
         if (this.y == positionY(0)) { /*Aqui é a posição do gol*/
             alert('Você conseguiu, Parabéns!');
