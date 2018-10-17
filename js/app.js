@@ -92,8 +92,19 @@ class Player extends Character { /* Contém característica de personagem*/
         this.move = '';
     }
 
-    /*Verifica cada movimento do jogador*/
-    update() {
+    /*Verifica cada movimento do jogador - comentado para seguir a sugestão do revisor*/
+//     update() {
+        
+//     }
+
+    
+    reset() {
+        this.x = positionX(2);
+        this.y = positionY(5);
+    }
+
+    handleInput(mov) {
+        this.move = mov;
         switch (this.move) {
             case 'up': /* Se apertar pra cima, verifica se não vai pra fora do mapa*/
                 if(this.y - this.moveY <= positionY(-1))
@@ -124,17 +135,7 @@ class Player extends Character { /* Contém característica de personagem*/
             this.reset(); /* Reinicia tudo */
         }
     
-        this.move = '';
-    }
-
-    
-    reset() {
-        this.x = positionX(2);
-        this.y = positionY(5);
-    }
-
-    handleInput(mov) {
-        this.move = mov;
+        this.move = ''; //Cancela o comando atual para evitar movimento contínuo
     }
 }
 
