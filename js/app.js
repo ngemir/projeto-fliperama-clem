@@ -118,6 +118,12 @@ class Player extends Character { /* Contém característica de personagem*/
                 default: /* Prevenção de outros comandos, para fazer nada*/
                     break;
             }
+            if (this.y == positionY(0)) { /*Aqui é a posição do gol*/
+                alert('Você conseguiu, Parabéns!');
+                this.reset(); /* Reinicia tudo */
+            }
+
+            this.move = ''; //Cancela o comando atual para evitar movimento contínuo
     }
 
     
@@ -128,13 +134,6 @@ class Player extends Character { /* Contém característica de personagem*/
 
     handleInput(mov) {
         this.move = mov;
-    
-        if (this.y == positionY(0)) { /*Aqui é a posição do gol*/
-            alert('Você conseguiu, Parabéns!');
-            this.reset(); /* Reinicia tudo */
-        }
-    
-        this.move = ''; //Cancela o comando atual para evitar movimento contínuo
     }
 }
 
