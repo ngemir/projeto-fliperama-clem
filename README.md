@@ -17,4 +17,4 @@ Setas (Cima, Baixo, Esquerda, Direita);
 
 ou 
 
-Acesse : <https://ngemir.github.io/projeto-fliperama-clem/>
+Acesse : <https://swaveng.github.io/projeto-fliperama-clem/>
