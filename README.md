@@ -1,20 +1,10 @@
-# [ Udacity Front-end avançado ]
-Feito por Emir Takayama
-# Objetivo
-Chegar ao outro lado sem ser encostado por Clem (inimigo)
+# Projeto Fliperama Clem
+Feito por Emir Takayama com a orientação da aula da Udacity
 
-# Como jogar
-Setas (Cima, Baixo, Esquerda, Direita);
+## Objetivo do projeto
+Desenvolver um jogo via Javascript da qual o personagem tem o objetivo de chegar ao outro lado sem ser encostado por Clem (inimigo)
 
-# Acesso ao jogo
-1 - Faça download pelo <https://github.com/ngemir/fliperama-clem/archive/master.zip>.
+## Como jogar
+Setas (⬆Cima, ⬇Baixo, ⬅Esquerda, ➡Direita);
 
-2 - Extraia em lugar de preferência.
-
-3 - Abra o arquivo index.html
-
-4 - Bom jogo!
-
-ou 
-
-Acesse : <https://swaveng.github.io/projeto-fliperama-clem/>
+## [🎮Acesso ao jogo](https://swaveng.github.io/projeto-fliperama-clem/)
