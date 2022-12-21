@@ -9,4 +9,4 @@ Desenvolver um jogo via Javascript da qual o personagem tem o objetivo de chegar
 ## Como jogar
 Setas (⬆Cima, ⬇Baixo, ⬅Esquerda, ➡Direita);
 
-## [🎮Acesso ao jogo](https://swaveng.github.io/projeto-fliperama-clem/)
+## [🎮Acesso ao jogo](https://ngemir.github.io/projeto-fliperama-clem/)
